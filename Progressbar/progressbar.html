@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ikhmer4ever demo</title>
+
+    <style>
+        #ikh4Progress{
+            width: 100%;
+            background-color: rgb(81, 81, 81);
+        }
+    
+        #ikh4Bar{
+            width: 10%;
+            height: 40px;
+            background-color: rgb(0, 166, 3);
+            text-align: center;
+            line-height: 40px;
+            color: white;
+        }
+    
+    </style>
+
+</head>
+<body>
+<h1>JS Progress Bar Demo by iKhmer4ever</h1>
+<div id="ikh4Progress">
+    <div id="ikh4Bar">10%</div>
+</div>
+<br/>
+<button onclick="progress()">Go</button>
+    
+
+
+<script>
+    function progress(){
+        var item = document.getElementById("ikh4Bar");
+        var width = 10;
+        var id = setInterval(frame,10);
+
+        function frame(){
+            if (width >= 100){
+                clearInterval(id);
+            }else{
+                width++;
+                item.style.width = width + '%';
+                item.innerHTML = width * 1 + '%';
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>
